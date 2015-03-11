@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<definitions xmlns="http://schemas.oracle.com/events/edl" targetNamespace="http://xmlns.oracle.com/SOA12CCERT/EDNPersistency/myEventDefinitions">
+   <schema-import location="../Schemas/EDNProducer.xsd" namespace="http://xmlns.oracle.com/SOA12CCERT/EDNPersistency/EDNProducer"/>
+   <event-definition name="myFirstEvent">
+      <content xmlns:ns1="http://xmlns.oracle.com/SOA12CCERT/EDNPersistency/EDNProducer" element="ns1:process"/>
+   </event-definition>
+</definitions>
