@@ -25,5 +25,6 @@
    <list n="listOfChildren">
       <hash><url n="URL" path="EDNConsumer/EDNConsumer.jpr"/></hash>
       <hash><url n="URL" path="EDNPersistency/EDNPersistency.jpr"/></hash>
+      <hash><url n="URL" path="Subprocess/Subprocess.jpr"/></hash>
    </list>
 </jws:workspace>
