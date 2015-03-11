@@ -1,0 +1,27 @@
+<?xml version= '1.0' encoding= 'UTF-8' ?>
+<wsdl:definitions
+     name="EDNProducer"
+     targetNamespace="http://xmlns.oracle.com/SOA12CCERT/EDNPersistency/EDNProducer"
+     xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+     xmlns:client="http://xmlns.oracle.com/SOA12CCERT/EDNPersistency/EDNProducer"
+     xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype"
+    >
+    <plnk:partnerLinkType name="EDNProducer">
+        <plnk:role name="EDNProducerProvider" portType="client:EDNProducer"/>
+    </plnk:partnerLinkType>
+    <wsdl:types>
+        <schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+             xmlns:client="http://xmlns.oracle.com/SOA12CCERT/EDNPersistency/EDNProducer"
+             xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype">
+            <import namespace="http://xmlns.oracle.com/SOA12CCERT/EDNPersistency/EDNProducer" schemaLocation="../Schemas/EDNProducer.xsd"/>
+        </schema>
+    </wsdl:types>
+    <wsdl:message name="EDNProducerRequestMessage">
+        <wsdl:part name="payload" element="client:process"/>
+    </wsdl:message>
+    <wsdl:portType name="EDNProducer">
+        <wsdl:operation name="process">
+            <wsdl:input message="client:EDNProducerRequestMessage"/>
+        </wsdl:operation>
+    </wsdl:portType>
+</wsdl:definitions>
